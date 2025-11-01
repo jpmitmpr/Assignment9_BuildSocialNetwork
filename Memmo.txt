@@ -1,0 +1,7 @@
+Design Memo:
+
+A graph is a great way to represent a social network because it shows the relationships between people clearly. In this setup, each person is a node, and each friendship is a connection (edge) between two nodes. Using a graph makes it easy to see who is friends with whom, find friends of friends, or suggest new connections.
+
+Using just a list or a tree wouldn’t work as well. A list can store people, but keeping track of friendships would be messy and slow because you’d have to check every person to see who they’re friends with. A tree is hierarchical and only allows one parent per node, which doesn’t fit friendships since they are two-way and don’t have a “top-down” order.
+
+One challenge with this graph approach is making sure friendships are added in both directions without creating duplicates, which takes a little extra work. Printing the network involves going through everyone and their friends, which takes time proportional to the number of people and friendships. Overall, using an adjacency list (a list of friends for each person) is a good balance between memory and performance, especially when each person only has a few friends compared to the whole network.
